@@ -9,22 +9,22 @@ serviceAccount: projects/optical-name-439104-a6/serviceAccounts/kalyanterraform@
 steps:
   # Step 1: Build the Docker image
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/optical-name-439104-a6/flask-app', '.']
+    args: ['build', '-t', 'gcr.io/optical-name-439104-a6/flask-app:2.3.3:2.3.3', '.']
 
   # Step 2: Push the Docker image to Google Container Registry
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'gcr.io/optical-name-439104-a6/flask-app']
+    args: ['push', 'gcr.io/optical-name-439104-a6/flask-app:2.3.3']
 
   # Step 3: Deploy to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
     args: [
-      'run', 'deploy', 'flask-app',
-      '--image', 'gcr.io/optical-name-439104-a6/flask-app',
+      'run', 'deploy', 'flask-app:2.3.3',
+      '--image', 'gcr.io/optical-name-439104-a6/flask-app:2.3.3',
       '--region', 'us-central1',
       '--platform', 'managed',
       '--allow-unauthenticated'
     ]
 
 images:
-  - 'gcr.io/optical-name-439104-a6/flask-app'
+  - 'gcr.io/optical-name-439104-a6/flask-app:2.3.3'
