@@ -5,9 +5,9 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy requirements.txt into the container
-COPY requirements.txt /app/requirements.txt
+#COPY requirements.txt /app/requirements.txt
+COPY . /app/
 
-RUN pip install --upgrade pip
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r /app/requirements.txt 
 
