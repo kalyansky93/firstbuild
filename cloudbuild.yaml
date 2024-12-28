@@ -5,7 +5,6 @@ logsBucket: gs://kalfirstbuild
 options:
   defaultLogsBucketBehavior: REGIONAL_USER_OWNED_BUCKET
 serviceAccount: projects/optical-name-439104-a6/serviceAccounts/kalyanterraform@optical-name-439104-a6.iam.gserviceaccount.com
-logging: NONE
 
 steps:
   # Step 1: Build the Docker image
