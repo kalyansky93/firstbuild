@@ -11,7 +11,7 @@ COPY . /app/
 RUN pip install --no-cache-dir flask
 
 # Make port 8080 available to the world outside the container
-EXPOSE 8080
+EXPOSE 8081
 
 # Define environment variable
 ENV PYTHONUNBUFFERED=1
