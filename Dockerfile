@@ -5,11 +5,11 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy requirements.txt into the container
-COPY requirements.txt /app/
+COPY requirements.txt /app/requirements.txt
 
 RUN pip install --upgrade pip
 # Install any needed packages specified in requirements.txt
-RUN /bin/sh -c pip install --no-cache-dir -r /app/requirements.txt 
+RUN pip install --no-cache-dir -r /app/requirements.txt 
 
 # Make port 8080 available to the world outside the container
 EXPOSE 8080
