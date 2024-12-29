@@ -28,4 +28,4 @@ steps:
     ]
 
 images:
-  - 'gcr.io/optical-name-439104-a6/flask-app:2.3.3'
+  - 'gcr.io/optical-name-439104-a6/flask-app'
