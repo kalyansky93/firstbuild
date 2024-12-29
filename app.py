@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "Hello, World! Welcome to GCP and cloud build!"
+    return "Hello, World! Welcome to GCP and cloud build!,\n this is after successful run in gcp"
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8081)
